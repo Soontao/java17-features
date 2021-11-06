@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/v1/demo")
@@ -44,7 +43,7 @@ public class DemoController {
             //if (item instanceof Number && ((Number) item).longValue() > 10) {
             //    return 0;
             //}
-        }).collect(Collectors.toList());
+        }).toList(); // shorten of collect(Collectors.toList)
 
     }
 
